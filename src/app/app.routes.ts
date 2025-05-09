@@ -10,14 +10,14 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent,
+    loadComponent:()=>import('./login/login.component').then(m=>m.LoginComponent)
   },
   {
     path: 'home',
     children: [
       {
         path: '',
-        component: MainLayoutComponent,
+        loadComponent:()=>import('./main-layout/main-layout.component').then(m=>m.MainLayoutComponent)
       },
     ],
   },
