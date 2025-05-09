@@ -3,10 +3,17 @@
     <div class="left-section">
       <div class="head">
         <span> Welcome back </span>
-        <button (click)="makeRequest()">Make HTTP Request</button>
         <span>hacker !!</span>
+        <input [(ngModel)]="username" type="text"  />
+        {{username}}
+        <button (click)="makeRequest()">request</button>
       </div>
     </div>
-    <div class="right-section"></div>
+    <div class="right-section">
+      <span>
+        <app-inspecting [size]="80"></app-inspecting>
+      </span>
+      
+    </div>
   </div>
 </div>

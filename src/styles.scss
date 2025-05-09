@@ -2,7 +2,7 @@
 
 :root {
   @include mat.progress-bar-overrides((
-    active-indicator-color: orange,
+    active-indicator-color: rgb(249, 137, 137),
     track-color: red,
   ));
 }
@@ -13,7 +13,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+::selection{
+  background: red;
+  color:white;
+}
 * {
   // font-family: 'Titillium Web', Tahoma, Arial;
   font-family: 'Inter', sans-serif;
