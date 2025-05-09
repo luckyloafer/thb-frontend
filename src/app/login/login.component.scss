@@ -1,0 +1,38 @@
+.body {
+  background-image:
+    linear-gradient(156deg, rgb(0, 0, 0) 35%, rgba(235, 0, 0, 0.78) 100%),
+    url(../../assets/login-background.jpg) !important;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 80px;
+}
+
+.login-cont {
+  height: 100%;
+  padding: 40px;
+  background-color: rgb(128 128 128 / 16%);
+  display: flex;
+  border-radius: var(--border-radius);
+  .left-section {
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid red;
+    .head {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 40px;
+      span {
+        font-weight: inherit;
+        color: inherits;
+      }
+    }
+  }
+  .right-section {
+    height: 100%;
+    width: 50%;
+  }
+}
