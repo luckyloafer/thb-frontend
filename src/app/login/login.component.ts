@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { delay } from 'rxjs';
 import { InspectingComponent } from '../shared/components/inspecting/inspecting.component';
 import { AuthService } from '../shared/services/auth.service';
 
@@ -9,21 +8,22 @@ import { AuthService } from '../shared/services/auth.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
-  imports:[FormsModule,InspectingComponent]
+  imports: [FormsModule, InspectingComponent]
 })
 export class LoginComponent {
-  constructor(private http: HttpClient,private loginService:AuthService) {}
+  constructor(private http: HttpClient, private loginService: AuthService) { }
+  public hasWhite = true;
+  public hasRed = true;
+  // username:string = ''
 
-  username:string = ''
-
-  makeRequest() {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').pipe(
-      delay(3000) // ⏳ Add artificial 3-second delay
-    ).subscribe(res => {
-    });
-  }
-
-  login(){
-    this.loginService.login('lakshman','123',true)
+  // makeRequest() {
+  //   this.http.get('https://jsonplaceholder.typicode.com/posts').pipe(
+  //     delay(3000) // ⏳ Add artificial 3-second delay
+  //   ).subscribe(res => {
+  //   });
+  // }
+  public subtext = true
+  login() {
+    this.loginService.login('lakshman', '123', true)
   }
 }
