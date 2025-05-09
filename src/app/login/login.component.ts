@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { delay } from 'rxjs';
 import { InspectingComponent } from '../shared/components/inspecting/inspecting.component';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { InspectingComponent } from '../shared/components/inspecting/inspecting.
   imports:[FormsModule,InspectingComponent]
 })
 export class LoginComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private loginService:AuthService) {}
 
   username:string = ''
 
@@ -20,5 +21,9 @@ export class LoginComponent {
       delay(3000) // ⏳ Add artificial 3-second delay
     ).subscribe(res => {
     });
+  }
+
+  login(){
+    this.loginService.login('lakshman','123',true)
   }
 }

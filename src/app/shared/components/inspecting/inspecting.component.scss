@@ -3,6 +3,12 @@ img{
     animation: float 3s ease-in-out infinite;
 }
 
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes float {
     0% {
       transform: translateY(0);

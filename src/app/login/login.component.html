@@ -1,19 +1,12 @@
 <div class="body">
   <div class="login-cont">
     <div class="left-section">
-      <div class="head">
-        <span> Welcome back </span>
-        <span>hacker !!</span>
-        <input [(ngModel)]="username" type="text"  />
-        {{username}}
-        <button (click)="makeRequest()">request</button>
-      </div>
+      
+      <span class="hover-logo">
+        <app-inspecting [size]="300"></app-inspecting>
+      </span>
     </div>
     <div class="right-section">
-      <span>
-        <app-inspecting [size]="80"></app-inspecting>
-      </span>
-      
     </div>
   </div>
 </div>
