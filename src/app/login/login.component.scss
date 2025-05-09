@@ -1,6 +1,6 @@
 .body {
   background-image:
-    linear-gradient(156deg, rgb(0, 0, 0) 35%, rgba(235, 0, 0, 0.78) 100%),
+    linear-gradient(156deg, rgb(0, 0, 0, 0.9) 35%, rgba(235, 0, 0, 0.78) 100%),
     url(../../assets/login-background.jpg) !important;
 
   background-size: cover;
@@ -17,6 +17,7 @@
   background-color: rgb(128 128 128 / 16%);
   display: flex;
   border-radius: var(--border-radius);
+  backdrop-filter: blur(4px);
   .left-section {
     width: 50%;
     height: 100%;
