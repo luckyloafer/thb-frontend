@@ -5,6 +5,6 @@ import { LoginComponent } from '../login/login.component';
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',
-  imports: [LoginComponent],
+  imports: [],
 })
 export class MainLayoutComponent {}

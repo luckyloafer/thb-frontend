@@ -5,7 +5,7 @@ import { InspectingComponent } from './shared/components/inspecting/inspecting.c
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,LoaderComponent,InspectingComponent],
+  imports: [RouterOutlet,LoaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
