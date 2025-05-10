@@ -1,12 +1,21 @@
 <div class="body">
   <div class="login-cont">
     <div class="left-section">
-      
-      <span class="hover-logo">
-        <app-inspecting [size]="300"></app-inspecting>
-      </span>
     </div>
     <div class="right-section">
+      <button (click)="login()" >login</button>
+      <button *ngIf="showOptionsButton" (click)="makeRequest()">options</button>
     </div>
+    <span class="hover-logo" [ngClass]="{
+      'centered-logo': centerLogo,
+      'grow-logo': growLogo
+    }" (animationend)="handleAnimationEnd($event)">
+      <app-inspecting [size]="logoSize"></app-inspecting>
+    </span>
+  </div>
+  <div class="side-nav" *ngIf="showSideNav">
+
   </div>
 </div>
+
+

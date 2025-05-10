@@ -9,37 +9,101 @@
   width: 100%;
   height: 100vh;
   padding: 40px 80px;
+  overflow: hidden;
+  position: relative;
 }
 
 .login-cont {
+  position: relative; /* Add this so .hover-logo positions relative to it */
   height: 100%;
   padding: 40px;
   background-color: rgb(128 128 128 / 16%);
   display: flex;
   border-radius: var(--border-radius);
   backdrop-filter: blur(4px);
+
   .left-section {
     width: 50%;
     height: 100%;
     border-right: 2px solid red;
+
     .head {
       color: var(--primary-color);
       font-weight: 600;
       font-size: 40px;
+
       span {
         font-weight: inherit;
-        color: inherits;
+        color: inherit;
       }
     }
-
-    .hover-logo{
-      position: absolute;
-      bottom: 19%;
-      left: 10%;
-    }
   }
+
   .right-section {
     height: 100%;
     width: 50%;
+  }
+
+  .hover-logo {
+    position: absolute;
+  bottom: 10%;
+  left: 10%;
+  transform: translate(-40%, 31%);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  }
+
+  .centered-logo {
+    animation: move-to-center 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  .grow-logo{
+    animation: grow-and-go 1s ease forwards ;
+  }
+}
+
+.side-nav{
+  min-height: 70vh;
+  max-height: 70vh;
+  width: 30vw;
+  background-color: var(--primary-color);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  right: 0;
+  top: 20vh;
+  position: absolute;
+  animation: slide-nav 1s ease forwards;
+  transform: translateX(100%); /* Start off-screen */
+}
+
+@keyframes slide-nav {
+  0% {
+    transform: translateX(100%); /* Completely off-screen to the right */
+  }
+  100% {
+    transform: translateX(0); /* Fully visible */
+  }
+}
+
+@keyframes move-to-center {
+  0% {
+    bottom: 10%;
+    left: 10%;
+    transform: translate(0, 0);
+  }
+  100% {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+@keyframes grow-and-go {
+  0% {
+    left: 50%;
+    bottom: 50%;
+  }
+  100% {
+    transform: translate(-158px,-50px) scale(12); // Adjust scale as needed
+    
   }
 }

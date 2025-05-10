@@ -21,12 +21,5 @@ export class AuthService {
     alert('logout success');
   }
 
-
-
-//   public getPayLoad(token: string){
-//     const decoded = this.jwt_decode(token);
-//     const email = localStorage.getItem('email');
-//     decoded.email = email;
-//     return decoded;
-// }
+  
 }
